@@ -1,6 +1,6 @@
 # UEDemo
 
-Tiny demo repo for standing up CI and unit tests.
+Tiny demo repo for standing up CI, linting, and unit tests.
 
 ## Usage
 
@@ -14,6 +14,12 @@ python -c "import uedemo; print(uedemo.greet('Bryant'))"
 python -m unittest discover -s tests -v
 ```
 
+## Lint
+
+```bash
+ruff check .
+```
+
 ## CI
 
-GitHub Actions runs on pushes and PRs to `main` and executes the unit tests.
+GitHub Actions runs on pushes and PRs to `main` and executes ruff + unit tests.
