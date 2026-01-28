@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Show repo contents
+        run: |
+          echo "CI running on $GITHUB_REF"
+          pwd
+          ls -la
+      - name: Placeholder tests
+        run: |
+          echo "No tests configured yet. Add them here."
